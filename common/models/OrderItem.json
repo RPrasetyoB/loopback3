@@ -1,0 +1,18 @@
+{
+    "name": "OrderItem",
+    "base": "PersistedModel",
+    "properties": {
+        "orderId": {
+            "type": "number",
+            "required": true
+        },
+        "menuItemId": {
+            "type": "number",
+            "required": true
+        },
+        "quantity": {
+            "type": "number",
+            "required": true
+        }
+    }
+}

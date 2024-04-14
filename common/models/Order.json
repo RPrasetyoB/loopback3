@@ -1,0 +1,17 @@
+{
+    "name": "Order",
+    "base": "PersistedModel",
+    "properties": {
+        "customerId": {
+            "type": "number",
+            "required": true
+        }
+    },
+    "relations": {
+        "customer": {
+            "type": "belongsTo",
+            "model": "Customer",
+            "foreignKey": "customerId"
+        }
+    }
+}

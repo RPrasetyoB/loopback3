@@ -1,0 +1,14 @@
+{
+    "name": "MenuItem",
+    "base": "PersistedModel",
+    "properties": {
+        "name": "string"
+    },
+    "relations": {
+        "orders": {
+            "type": "hasMany",
+            "model": "Order",
+            "through": "OrderItem"
+        }
+    }
+}

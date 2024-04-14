@@ -1,0 +1,7 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "postgresql",
+    "url": "postgres://postgres.jmofzpfojfcwehdfmfnl:fullstacktask1@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
+  }
+}
