@@ -1,14 +1,20 @@
 {
-    "name": "OrderItem",
+    "name": "Order_item",
     "base": "PersistedModel",
     "properties": {
         "orderId": {
             "type": "number",
-            "required": true
+            "required": true,
+            "postgresql": {
+                "columnName": "orderId"
+            }
         },
         "menuItemId": {
             "type": "number",
-            "required": true
+            "required": true,
+            "postgresql": {
+                "columnName": "menuItemId"
+            }
         },
         "quantity": {
             "type": "number",

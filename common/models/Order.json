@@ -4,7 +4,10 @@
     "properties": {
         "customerId": {
             "type": "number",
-            "required": true
+            "required": true,
+            "postgresql": {
+                "columnName": "customerId"
+            }
         }
     },
     "relations": {

@@ -31,9 +31,6 @@ app.use(passport.session());
 
 boot(app, __dirname, function(err) {
   if (err) throw err;
-
-  require('./boot/customer')(app);
-
   if (require.main === module)
     app.start();
 });
