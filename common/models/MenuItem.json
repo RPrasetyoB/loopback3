@@ -1,5 +1,5 @@
 {
-    "name": "MenuItem",
+    "name": "Menu_item",
     "base": "PersistedModel",
     "properties": {
         "name": "string"
