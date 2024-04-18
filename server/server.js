@@ -1,10 +1,3 @@
-// Copyright IBM Corp. 2016,2019. All Rights Reserved.
-// Node module: loopback-workspace
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
-'use strict';
-
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 const passport = require('passport');
@@ -31,6 +24,12 @@ app.use(passport.session());
 
 boot(app, __dirname, function(err) {
   if (err) throw err;
+
+  require('./boot/customer')(app);
+  require('./boot/order')(app);
+
   if (require.main === module)
     app.start();
 });
+
+module.exports = app;

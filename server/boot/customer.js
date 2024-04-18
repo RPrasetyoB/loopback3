@@ -1,5 +1,3 @@
-'use strict';
-
 const {getToken, loggedUser} = require('../utils');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -61,7 +59,8 @@ module.exports = function(app) {
           if (!passwordMatch) {
             return res.status(401).json({message: 'Invalid email or password'});
           }
-          const token = jwt.sign({userId: user.id}, jwtKey, {expiresIn: '7d'});
+          const token = jwt.sign({userId: user.id}, jwtKey, {expiresIn: '60d'});
+
           res.status(200).json({message: 'User Logged in Successfully', token: token});
         });
       });

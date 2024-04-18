@@ -1,5 +1,9 @@
 {
   "extends": "loopback",
+  "env": {
+    "node": true,
+    "mocha": true
+  },
   "rules": {
     "max-len": [
       "error",
