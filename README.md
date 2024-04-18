@@ -22,11 +22,6 @@ Before using the API server, ensure that you have:
 ## Authentication
 
 The API server uses a bearer token authentication mechanism to secure endpoints. Clients are required to include a valid JWT (JSON Web Token) in the `Authorization` header of their requests.
-
-##### Token Generation
-
-When a user successfully logs in, the API server generates a JWT token and returns it to the client. This token should be securely stored by the client and included in subsequent API requests to authenticate the user.
-
 ```javascript
 const jwt = require('jsonwebtoken');
 const jwtKey = process.env.JWT_SECRET;
@@ -52,6 +47,9 @@ module.exports = {
   },
 };
 ```
+##### Token Generation
+
+When a user successfully logs in, the API server generates a JWT token and returns it to the client. This token should be securely stored by the client and included in subsequent API requests to authenticate the user.
 
 ## Endpoints
 
