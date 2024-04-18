@@ -1,5 +1,3 @@
-
-
 # API Documentation
 
 ## Overview
@@ -22,6 +20,7 @@ Before using the API server, ensure that you have:
 ## Authentication
 
 The API server uses a bearer token authentication mechanism to secure endpoints. Clients are required to include a valid JWT (JSON Web Token) in the `Authorization` header of their requests.
+<br>
 below how server get authentication
 ```javascript
 const jwt = require('jsonwebtoken');
