@@ -1,5 +1,3 @@
-'use strict';
-
 const {getToken, loggedUser} = require('../utils');
 
 module.exports = function(app) {
@@ -51,17 +49,20 @@ module.exports = function(app) {
         return res.status(401).json({message: 'Invalid email or password'});
       }
 
-      bcrypt.compare(password, user.password, function(err, passwordMatch) {
-        if (err) {
-          return next(err);
-        }
-        if (!passwordMatch) {
-          return res.status(401).json({message: 'Invalid email or password'});
-        }
-        const token = jwt.sign({userId: user.id}, jwtKey, {expiresIn: '7d'});
-        res.status(200).json({message: 'User Logged in Successfully', token: token});
+        bcrypt.compare(password, user.password, function(err, passwordMatch) {
+          if (err) {
+            throw err;
+          }
+          if (!passwordMatch) {
+            return res.status(401).json({message: 'Invalid email or password'});
+          }
+          const token = jwt.sign({userId: user.id}, jwtKey, {expiresIn: '60d'});
+          res.status(200).json({message: 'User Logged in Successfully', token: token});
+        });
       });
-    });
+    } catch (error) {
+      return next(error);
+    }
   });
 
   // get user information endpoint
