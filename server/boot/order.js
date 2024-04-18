@@ -1,5 +1,3 @@
-'use strict';
-
 const {getToken, loggedUser} = require('../utils');
 
 module.exports = function(app) {

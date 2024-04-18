@@ -1,4 +1,3 @@
-'use strict';
 const jwt = require('jsonwebtoken');
 const jwtKey = process.env.JWT_SECRET;
 module.exports = {
