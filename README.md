@@ -47,7 +47,7 @@ module.exports = {
   },
 };
 ```
-##### Token Generation
+#### Token Generation
 
 When a user successfully logs in, the API server generates a JWT token and returns it to the client. This token should be securely stored by the client and included in subsequent API requests to authenticate the user.
 
