@@ -23,7 +23,7 @@ describe('order endpoint request', function() {
   });
 
   it('should create order then delete order', function(done) {
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImlhdCI6MTcxMzMzODA5NiwiZXhwIjoxNzE4NTIyMDk2fQ.OozQQYavR4uWWROpftviA15wMmF-vKTmFX_veujA-0I";
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImlhdCI6MTcxMzQxNjk3OSwiZXhwIjoxNzE4NjAwOTc5fQ.v5FjERr0735i-pc39r8s8jZExV0tyzsc-Anckyykvr8";
 
   json('post', '/api/order')
     .set('Authorization', `Bearer ${token}`)

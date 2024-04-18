@@ -29,7 +29,7 @@ module.exports = function(app) {
             return next(err);
           }
         });
-        res.status(200).json({message: 'Order created successfully'});
+        res.status(200).json({message: 'Order created successfully', data: order});
       });
     } catch (error) {
       return next(error);
