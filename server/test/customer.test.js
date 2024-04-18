@@ -93,7 +93,7 @@ describe('customer endpoint request', function() {
       if (err) return done(err);
       const token = loginRes.body.token;
 
-      json('post', '/api/user/delete')
+      json('delete', '/api/user/delete')
         .set('Authorization', `Bearer ${token}`)
         .expect(200, function(err, deleteRes) {
           if (err) return done(err);

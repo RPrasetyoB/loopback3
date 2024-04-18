@@ -126,7 +126,7 @@ module.exports = function(app) {
   });
 
   // delete user endpoint
-  app.post('/api/user/delete', function(req, res, next) {
+  app.delete('/api/user/delete', function(req, res, next) {
     const token = getToken(req);
     if (!token) {
       return res.status(401).send({message: 'Unauthorized, please login'});
