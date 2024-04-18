@@ -31,7 +31,7 @@
     "dataSource": "db",
     "public": false
   },
-  "MenuItem": {
+  "Menu_item": {
     "dataSource": "db",
     "public": true
   },
@@ -43,7 +43,7 @@
     "dataSource": "db",
     "public": true
   },
-  "OrderItem": {
+  "Order_item": {
     "dataSource": "db",
     "public": true
   }
